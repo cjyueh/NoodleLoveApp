@@ -5,8 +5,8 @@ class CreateReviews < ActiveRecord::Migration
       t.integer :dish_rating
       t.text :dish_review
       t.string :dish_image
-      t.integer :dish_id
-      t.integer :user_id
+      t.references :dish
+      t.references :user	
 
       t.timestamps null: false
     end

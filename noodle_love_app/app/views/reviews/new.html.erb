@@ -6,22 +6,22 @@
 	</div>
 	<div>
 		<label>Rating:</label>
-		<%= radio_button_tag(:dish_rating, "1") %>
+		<%= f.radio_button :dish_rating, 1 %>
 		<%= label_tag(:dish_rating, "Worst") %>
-		<%= radio_button_tag(:dish_rating, "2") %>
+		<%= f.radio_button :dish_rating, 2 %>
 		<%= label_tag(:dish_rating, "2") %>
-		<%= radio_button_tag(:dish_rating, "3") %>
+		<%= f.radio_button :dish_rating, 3 %>
 		<%= label_tag(:dish_rating, "3") %>
-		<%= radio_button_tag(:dish_rating, "4") %>
+		<%= f.radio_button :dish_rating, 4 %>
 		<%= label_tag(:dish_rating, "4") %>
-		<%= radio_button_tag(:dish_rating, "5") %>
+		<%= f.radio_button :dish_rating, 5 %>
 		<%= label_tag(:dish_rating, "Best") %>
 	</div>
 	<div>
 		<%= f.text_area :dish_review, size: "60x6", placeholder: "Dish Review" %>
 	</div>
 	<div>
-		<%= f.text_field :dish_image, placeholder: "Dish Image URL" %>
+		<%= f.url_field :dish_image, placeholder: "Dish Image URL" %>
 		<%#= f.input :dish_image, label: "JPG file:", input_html: {accept: ('application/jpg')} -%>
 	</div>
 	<div>
