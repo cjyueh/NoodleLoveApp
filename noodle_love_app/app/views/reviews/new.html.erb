@@ -1,0 +1,31 @@
+<h1>This page is for adding a new review of a dish.</h1>
+
+<%= form_for @review do |f| %>
+	<div>
+		<%= f.text_field :restaurant_name, placeholder: "Restaurant Name" %>
+	</div>
+	<div>
+		<label>Rating:</label>
+		<%= radio_button_tag(:dish_rating, "1") %>
+		<%= label_tag(:dish_rating, "Worst") %>
+		<%= radio_button_tag(:dish_rating, "2") %>
+		<%= label_tag(:dish_rating, "2") %>
+		<%= radio_button_tag(:dish_rating, "3") %>
+		<%= label_tag(:dish_rating, "3") %>
+		<%= radio_button_tag(:dish_rating, "4") %>
+		<%= label_tag(:dish_rating, "4") %>
+		<%= radio_button_tag(:dish_rating, "5") %>
+		<%= label_tag(:dish_rating, "Best") %>
+	</div>
+	<div>
+		<%= f.text_area :dish_review, size: "60x6", placeholder: "Dish Review" %>
+	</div>
+	<div>
+		<%= f.text_field :dish_image, placeholder: "Dish Image URL" %>
+		<%#= f.input :dish_image, label: "JPG file:", input_html: {accept: ('application/jpg')} -%>
+	</div>
+	<div>
+		<%= f.collection_select :dish_id, @dishes, :id, :dish_name %>
+	</div>
+	<%= f.submit "ADD REVIEW" %>
+<% end %>
