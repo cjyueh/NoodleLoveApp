@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "dishes#index"
 
-  get "/:dish_name", to: "dishes#show"
+  get "/dishes/:id", to: "dishes#show" #as: "dish"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

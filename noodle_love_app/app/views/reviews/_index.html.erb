@@ -1,9 +1,7 @@
-<h1>This will be a page for one dish.</h1>
-
-<h1><%= @dish.dish_name %></h1>
+<h1>This will be a list of all the reviews for a noodle dish.</h1>
 
 <ul>
-	<% @dish.reviews.each do |review| %>
+	<% @reviews.each do |review| %>
 		<li><%= review.restaurant_name %></li>
 		<li><%= review.dish_rating %></li>
 		<li><%= review.dish_review %></li>
