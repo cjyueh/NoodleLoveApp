@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
 		render :show
 	end
 
-	#provide form to create a review for a dish
+	#provide form to create a new review for a dish
 	def new
 		@review = Review.new
 		@dishes = Dish.all
@@ -24,7 +24,7 @@ class ReviewsController < ApplicationController
 		end
 	end
 
-	#edit the review form of a dish
+	#provide form to edit an existing review of a dish
 	def edit
 		@review = Review.find(params[:id])
 		@dishes = Dish.all
@@ -39,7 +39,7 @@ class ReviewsController < ApplicationController
 		redirect_to dish_path(dish) #redirects to dishes#show
 	end
 
-	#deletes a review for a dish
+	#deletes an existing review for a dish
 	def destroy
 		@review = Review.find(params[:id])
 		@review.destroy

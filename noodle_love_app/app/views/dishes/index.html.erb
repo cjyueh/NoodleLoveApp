@@ -1,5 +1,8 @@
 <h1>This will be a list of all the noodle dishes.</h1>
 
+<%#= dropdown for sorting dish index alphabetically or by cuisine %>
+<%#= search field or looking up a particular dish in the index %>
+
 <ul>
 	<% @dishes.each do |dish| %>
 		<li><%= dish.dish_name %></li>
