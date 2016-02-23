@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
 	#show info for one review of a dish
 	def show
 		@review = Review.find(params[:id]) #find review with that id and save as instance of the review
+		@dish = @review.dish_id
 		render :show
 	end
 
@@ -28,6 +29,22 @@ class ReviewsController < ApplicationController
 		@review = Review.find(params[:id])
 		@dishes = Dish.all
 		render :edit
+	end
+
+	#updates a review for a dish
+	def update
+		@review = Review.find(params[:id])
+		@review.update_attributes(review_params)
+		dish = @review.dish_id
+		redirect_to dish_path(dish) #redirects to dishes#show
+	end
+
+	#deletes a review for a dish
+	def destroy
+		@review = Review.find(params[:id])
+		@review.destroy
+		dish = @review.dish_id
+		redirect_to dish_path(dish) #redirects to dishes#show
 	end
 
 	private

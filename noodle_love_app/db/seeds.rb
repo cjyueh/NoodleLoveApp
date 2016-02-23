@@ -16,5 +16,5 @@ Dish.create({dish_name: "Fried Eggplant Oroshi Udon", cuisine_type: "Japanese"})
 Dish.create({dish_name: "Pad Kee Maw", cuisine_type: "Thai"})
 
 # seeding db with list of reviews
-Review.create({restaurant_name: "Crustacean", dish_rating: 5, dish_review: "Great dish.", dish_image: "http://www.nobiggie.net/wp-content/uploads/2012/09/garlic-noodles.jpg", dish: 1, user_id: 1})
-Review.create({restaurant_name: "Crustacean", dish_rating: 3, dish_review: "Just ok.", dish_image: "https://41.media.tumblr.com/tumblr_m8xdnutfa81rtx3pyo1_500.jpg", dish: 1, user_id: 2})
+# Review.create({restaurant_name: "Crustacean", dish_rating: 5, dish_review: "Great dish.", dish_image: "http://www.nobiggie.net/wp-content/uploads/2012/09/garlic-noodles.jpg", dish: 1, user_id: 1})
+# Review.create({restaurant_name: "Crustacean", dish_rating: 3, dish_review: "Just ok.", dish_image: "https://41.media.tumblr.com/tumblr_m8xdnutfa81rtx3pyo1_500.jpg", dish: 1, user_id: 2})
