@@ -12,17 +12,22 @@ class ReviewsController < ApplicationController
 		render :new
 	end
 
+	#creates a review for a dish
 	def create
 		@review = Review.new(review_params)
 		dish = @review.dish_id
 		if @review.save
-			redirect_to dish_path(dish)
+			redirect_to dish_path(dish) #redirects to dishes#show
 		else
 			render :new
 		end
 	end
 
+	#edit the review form of a dish
 	def edit
+		@review = Review.find(params[:id])
+		@dishes = Dish.all
+		render :edit
 	end
 
 	private
