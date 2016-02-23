@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   get "/dishes/:id", to: "dishes#show" #as: "dish"
 
+  get "/reviews/:id", to: "reviews#show" #as: "review"
+
+  get "/reviews/new", to: "reviews#new" #as: "new_review"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

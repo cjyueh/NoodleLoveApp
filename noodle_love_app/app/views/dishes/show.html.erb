@@ -2,11 +2,11 @@
 
 <h1><%= @dish.dish_name %></h1>
 
-<ul>
-	<% @dish.reviews.each do |review| %>
-		<li><%= review.restaurant_name %></li>
-		<li><%= review.dish_rating %></li>
-		<li><%= review.dish_review %></li>
-		<li><%= review.dish_image %></li>
-	<% end %>
-</ul>
+
+<% @dish.reviews.each do |review| %>
+	<img src="<%= review.dish_image %>" />
+	<h3><%= review.restaurant_name %></h3>
+	<p><%= review.dish_rating %></p>
+	<p><%= review.dish_review %></p>
+<% end %>
+
