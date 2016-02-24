@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 	#show info for one review of a dish
 	def show
 		@review = Review.find(params[:id]) #find review with that id and save as instance of the review
-		@dish = Dish.find(@review.dish_id)
+		@dish = Dish.find(@review.dish_id) #find dish that matches dish_id and save as instance of the dish
 		render :show
 	end
 
@@ -28,7 +28,11 @@ class ReviewsController < ApplicationController
 	def edit
 		@review = Review.find(params[:id])
 		@dish = Dish.find(@review.dish_id)
-		render :edit
+		if (@current_user == @review.user)
+			render :edit
+		else
+			redirect_to dish_path(@dish)
+		end
 	end
 
 	#updates a review for a dish

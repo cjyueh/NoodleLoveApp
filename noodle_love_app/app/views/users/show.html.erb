@@ -7,4 +7,7 @@
 	<h3><%= review.restaurant_name %></h3>
 	<p><%= review.dish_rating %></p>
 	<p><%= review.dish_review %></p>
+	<%= link_to "EDIT REVIEW", edit_review_path(@review), :class => 'btn btn-primary' %>
+	<%= button_to "DELETE REVIEW", @review, :method => :delete %>
 <% end %>
+

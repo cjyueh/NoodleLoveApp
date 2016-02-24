@@ -18,5 +18,12 @@ module SessionsHelper
 	def logout
 		@current_user = session[:user_id] = nil
 	end
-	
+
+	# def authorize
+	# 	if @current_user == User.find(param[:id])
+	# 		@right_user = true
+	# 	else
+	# 		@right_user = false
+	# 	end
+	# end	
 end

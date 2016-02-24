@@ -1,6 +1,13 @@
 <h1>This will be a page for one dish.</h1>
 
-<%= link_to "ADD REVIEW", new_review_path, :class => 'btn btn-primary' %>
+<%#= if logged in, user can add review -%>
+<% if current_user %>
+	<%= link_to "ADD REVIEW", new_review_path, :class => 'btn btn-primary' %>
+<% else %>
+	<%= link_to "SIGN IN & POST", sign_in_path, :class => 'btn btn-primary' %>
+<% end %>
+
+
 <h1><%= @dish.dish_name %></h1>
 
 <% @dish.reviews.each do |review| %>

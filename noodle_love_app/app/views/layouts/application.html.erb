@@ -7,12 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<h1><%= link_to "NOODLE LOVE", root_path, :class => 'btn btn-primary' %></h1>
 	<div>
 		<% if current_user %>
-			<%= link_to "Sign Out", sign_out_path, method: :delete %><br>
+			<%#= show current user link to profile %>
+			<%#= link_to "User", user_path, :class => 'btn btn-primary' %>
+			<%= link_to "SIGN OUT", sign_out_path, method: :delete, :class => 'btn btn-primary' %>
 		<% else %>
-			<%= link_to "Sign In", sign_in_path %>
-			<%= link_to "Create Account", new_user_path %>
+			<%= link_to "SIGN IN", sign_in_path, :class => 'btn btn-primary' %>
+			<%= link_to "CREATE ACCOUNT", new_user_path, :class => 'btn btn-primary' %>
 		<% end %>
 	</div>
 
