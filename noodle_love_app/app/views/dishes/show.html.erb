@@ -6,5 +6,5 @@
 	<img src="<%= review.dish_image %>" />
 	<h3><%= review.restaurant_name %></h3>
 	<p><%= review.dish_rating %></p>
-	<p><%= review.dish_review %></p>
+	<p><%= link_to review.dish_review, review_path(review) %></p>
 <% end %>

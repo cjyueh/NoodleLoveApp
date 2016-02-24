@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 	#show info for one review of a dish
 	def show
 		@review = Review.find(params[:id]) #find review with that id and save as instance of the review
-		@dish = @review.dish_id
+		@dish = Dish.find(@review.dish_id)
 		render :show
 	end
 
@@ -27,7 +27,7 @@ class ReviewsController < ApplicationController
 	#provide form to edit an existing review of a dish
 	def edit
 		@review = Review.find(params[:id])
-		@dishes = Dish.all
+		@dish = Dish.find(@review.dish_id)
 		render :edit
 	end
 

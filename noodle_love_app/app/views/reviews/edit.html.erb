@@ -1,6 +1,6 @@
 <h1>This page is for editing a review of a dish.</h1>
 
-<h2><%#= @dish.dish_name -%> at <%= @review.restaurant_name %></h2>
+<h2><%= @dish.dish_name %> at <%= @review.restaurant_name %></h2>
 <%= form_for @review do |f| %>
 	<div>
 		<label>Rating:</label>
@@ -21,9 +21,6 @@
 	<div>
 		<%= f.url_field :dish_image, placeholder: "Dish Image URL" %>
 		<%#= f.input :dish_image, label: "JPG file:", input_html: {accept: ('application/jpg')} -%>
-	</div>
-	<div>
-		<%#= f.collection_select :dish_id, @dishes, :id, :dish_name -%>
 	</div>
 	<%= f.submit "UPDATE REVIEW" %>
 <% end %>

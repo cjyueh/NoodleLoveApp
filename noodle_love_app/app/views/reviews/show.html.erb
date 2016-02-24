@@ -1,8 +1,10 @@
 <h1>This will be a page for a review of a dish.</h1>
 
-<h2><%= @dish %> at <%= @review.restaurant_name %></h2>
+<h2><%= @dish.dish_name %> at <%= @review.restaurant_name %></h2>
 <img src="<%= @review.dish_image %>" />
 <p><%= @review.dish_rating %></p>
 <p><%= @review.dish_review %></p>
+
+<%#= if reviews author is not logged in, do not show edit or delete button%>
 <%= button_to "EDIT REVIEW", edit_review_path(@review), :method => :get %>
 <%= button_to "DELETE REVIEW", @review, :method => :delete %>

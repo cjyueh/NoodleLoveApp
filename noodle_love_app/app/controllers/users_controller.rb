@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.create(user_params)
 		login(@user)
-		redirect_to "/"
+		redirect_to root_path
 	end
 
 	#show info for one user
@@ -26,6 +26,6 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:first_name, :email, :password)
+		params.require(:user).permit(:first_name, :email, :password, :password_confirmation)
 	end
 end
