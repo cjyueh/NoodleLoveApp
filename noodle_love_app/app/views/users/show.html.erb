@@ -1,6 +1,6 @@
-<h1>This will be a page for one dish.</h1>
+<h1>This will be a page for one user.</h1>
 
-<h1><%= @dish.dish_name %></h1>
+<h1><%= @user.first_name %></h1>
 
 <% @dish.reviews.each do |review| %>
 	<img src="<%= review.dish_image %>" />
