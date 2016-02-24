@@ -5,6 +5,6 @@
 
 <ul>
 	<% @dishes.each do |dish| %>
-		<li><%= dish.dish_name %></li>
+		<li><%= link_to dish.dish_name, dish_path(dish) %></li>
 	<% end %>
 </ul>
