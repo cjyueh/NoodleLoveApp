@@ -27,5 +27,9 @@
 	<div>
 		<%= f.collection_select :dish_id, @dishes, :id, :dish_name %>
 	</div>
-	<%= f.submit "ADD REVIEW" %>
+	<% if current_user && current_user.id == @review.user_id %>
+		<%= f.submit "ADD REVIEW" %>
+	<% else %>
+		<%= f.submit "SIGN IN & POST" %>
+	<% end %>
 <% end %>
