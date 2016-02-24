@@ -10,5 +10,5 @@
 <%#= if logged in user is the author of a review, show edit or delete button -%>
 <% if current_user && current_user.id == @review.user_id %>
 	<%= link_to "EDIT REVIEW", edit_review_path(@review), :class => 'btn btn-primary' %>
-	<%= button_to "DELETE REVIEW", @review, :method => :delete %>
+	<%= button_to "DELETE REVIEW", @review, :method => :delete, :class => 'btn btn-primary' %>
 <% end %>

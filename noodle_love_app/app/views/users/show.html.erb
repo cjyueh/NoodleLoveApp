@@ -8,6 +8,6 @@
 	<p><%= review.dish_rating %></p>
 	<p><%= review.dish_review %></p>
 	<%= link_to "EDIT REVIEW", edit_review_path(@review), :class => 'btn btn-primary' %>
-	<%= button_to "DELETE REVIEW", @review, :method => :delete %>
+	<%= button_to "DELETE REVIEW", @review, :method => :delete, :class => 'btn btn-primary' %>
 <% end %>
 
