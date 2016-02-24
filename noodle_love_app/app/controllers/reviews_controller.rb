@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
 
 	#creates a review for a dish
 	def create
-		@review = Review.new(review_params)
+		@review = current_user.reviews.new(review_params)
 		dish = @review.dish_id
 		if @review.save
 			redirect_to dish_path(dish) #redirects to dishes#show
@@ -50,6 +50,6 @@ class ReviewsController < ApplicationController
 	private
 
 	def review_params
-		params.require(:review).permit(:restaurant_name, :dish_rating, :dish_review, :dish_image, :dish_id)
+		params.require(:review).permit(:restaurant_name, :dish_rating, :dish_review, :dish_image, :dish_id, :user_id)
 	end
 end
