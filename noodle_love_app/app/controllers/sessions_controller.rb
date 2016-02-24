@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
 
 	#create new session (sign in user)
 	def create
-		user_params = params.require(:user).permit(:email, :password)
 		@user = User.confirm(user_params)
 		if @user
 			login(@user)
@@ -15,5 +14,16 @@ class SessionsController < ApplicationController
 		else
 			redirect_to "/sign-in"
 		end
+	end
+
+	def destroy
+		logout
+		redirect_to "/"
+	end
+
+	private
+
+	def user_params
+		params.require(:user).permit(:email, :password)
 	end
 end
