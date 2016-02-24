@@ -2,7 +2,7 @@
 
 <h1><%= @user.first_name %></h1>
 
-<% @dish.reviews.each do |review| %>
+<% @user.reviews.each do |review| %>
 	<img src="<%= review.dish_image %>" />
 	<h3><%= review.restaurant_name %></h3>
 	<p><%= review.dish_rating %></p>

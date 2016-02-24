@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post "/users", to: "users#create"
   get "/users/:id", to: "users#show", as: "user"
 
-  # get "/sign-in", to "sessions#new"
+  get "/sign-in", to: "sessions#new"
   # post "/sessions", to "sessions#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
