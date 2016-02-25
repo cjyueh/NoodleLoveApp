@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NoodleLove</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="/style.css">
+	<title>NoodleLove</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<header>
@@ -29,13 +28,41 @@
 						<%= link_to "SIGN OUT", sign_out_path, method: :delete, :class => 'btn btn-primary' %>
 					<% else %>
 						<%= link_to "SIGN IN", sign_in_path, :class => 'btn btn-primary' %>
+						<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".sign-in">SIGN IN</button> -->
 						<%= link_to "CREATE ACCOUNT", new_user_path, :class => 'btn btn-primary' %>
 					<% end %>
 				</div>
 			</div>
 		</nav>
 	</header>
+
+<!-- <div class="modal fade sign-in" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<h1>This page is for signing in.</h1>
+				<%# if notice %>
+					<p class="alert alert_danger">Login Failed</p>
+				<%# end %>
+
+				<%#= form_for User.new, url: "/sessions", method: "post" do |f| %>
+					<div>
+						<%#= f.email_field :email, placeholder: "Email" %>
+					</div>
+					<div>
+						<%#= f.password_field :password, placeholder: "Password" %>
+					</div>
+					<%#= f.submit "SIGN IN" %>
+				<%# end %>
+
+				<h3>OR</h3>
+
+				<%#= link_to "CREATE ACCOUNT", new_user_path, :class => 'btn btn-primary' %>
+		</div>
+	</div>
+</div> -->
+
 	<%= yield %>
 	<%#= console %>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
