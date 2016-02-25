@@ -23,3 +23,11 @@
 	font-family: 'Sacramento', cursive;
 	font-size: 7em;
 }
+
+a:active {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}

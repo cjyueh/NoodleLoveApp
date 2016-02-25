@@ -10,12 +10,12 @@ class SessionsController < ApplicationController
 		@user = User.confirm(user_params)
 		if @user
 			login(@user)
-			# redirect_to "/"
-			redirect_to :back #when using modal
+			redirect_to "/"
+			# redirect_to :back #when using modal
 		else
-			# redirect_to "/sign-in"
+			redirect_to "/sign-in"
 			flash[:notice] = "Your email or password do not match. Try again."
-			redirect_to :back
+			# redirect_to :back
 		end
 	end
 

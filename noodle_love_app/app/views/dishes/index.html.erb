@@ -6,9 +6,14 @@
 <%#= search field or looking up a particular dish in the index %>
 <%# @dishes.sort! do |dish| %>
 
-
-<ul>
+<div id="dish-list">	
+	<input type="text" class="fuzzy-search" placeholder="search"/>
+	<button class="sort" data-sort="name">Alphabetize</button>
+<ul class="list">
 	<% @dishes.each do |dish| %>
-		<li><%= link_to dish.dish_name, dish_path(dish) %></li>
+		<li><%= link_to dish.dish_name, dish_path(dish), :class => "name" %></li>
 	<% end %>
 </ul>
+</div>
+
+
