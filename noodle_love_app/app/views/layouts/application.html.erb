@@ -7,7 +7,7 @@
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 	<link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Monoton' rel='stylesheet' type='text/css'>
 
 	<script src="http://listjs.com/no-cdn/list.js"></script>
 	<script src="http://listjs.com/no-cdn/list.fuzzysearch.js"></script>
@@ -25,15 +25,20 @@
 						<span class="icon-bar"></span>
 					</button>
 					<!-- <h1 class="navbar-brand"><%#= link_to "noodlelove", root_path, :id => "noodle-love" %></h1> -->
-					<h1 class="navbar-brand"><%= link_to "noodle", root_path, :class => "noodle-love", :id => "noodle" %><%= link_to "love", root_path, :class => "noodle-love", :id => "love" %></h1>
+					<h1 class="navbar-brand hidden-xs"><%= link_to "noodle", root_path, :class => "noodle-love", :id => "noodle" %>
+					<%= link_to "love", root_path, :class => "noodle-love", :id => "love" %></h1>
+					<h1 class="navbar-brand visible-xs"><%= link_to "no", root_path, :class => "noodle-love", :id => "noodle" %>
+					<%= link_to "lo", root_path, :class => "noodle-love", :id => "love" %></h1>
 				</div>
 				<div class="nav navbar-nav navbar-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<% if current_user %>
 						<%#= show current user link to profile %>
 						<%= link_to "#{current_user.first_name.upcase}", user_path(current_user), :class => 'btn btn-primary nav-btn' %>
+						<!-- <h2 class="nav-btn">|</h2> -->
 						<%= link_to "SIGN OUT", sign_out_path, method: :delete, :class => 'btn btn-primary nav-btn' %>
 					<% else %>
 						<%= link_to "SIGN IN", sign_in_path, :class => 'btn btn-primary nav-btn' %>
+						<!-- <h2 class="nav-btn">|</h2> -->
 						<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".sign-in">SIGN IN</button> -->
 						<%= link_to "CREATE ACCOUNT", new_user_path, :class => 'btn btn-primary nav-btn' %>
 					<% end %>
@@ -66,8 +71,10 @@
 		</div>
 	</div>
 </div> -->
-
-	<%= yield %>
+	<article class="container">
+		<%= yield %>
+	</article>
+	
 	<%#= console %>
 
 </body>

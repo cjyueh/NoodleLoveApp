@@ -14,7 +14,7 @@
  *= require_self
  */
 body {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .navbar-brand {
@@ -31,6 +31,7 @@ body {
 	background-color: #FFFFFF;
 	border-color: #FFFFFF;
 	color: #795E5E;
+	display: inline-block;
 	font-size: 1.25em;
 	margin-top: 3em;
 	text-decoration: none;
@@ -60,4 +61,8 @@ a:active {
 
 a:hover {
 	text-decoration: none;
+}
+
+.container {
+	text-align: center;
 }

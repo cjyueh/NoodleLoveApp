@@ -4,7 +4,7 @@
 
 <h2><%= @dish.dish_name %> at <%= @review.restaurant_name %></h2>
 <img src="<%= @review.dish_image %>" />
-<!-- <p><%#= @review.dish_rating %></p> -->
+<!-- <p><%= @review.dish_rating %></p> -->
 <%= render_noodles(@review.dish_rating) %>
 </div>
 <p><%= @review.dish_review %></p>
