@@ -170,24 +170,9 @@ ul {
 	padding: 1em;
 }
 
-#user_first_name {
+.form-control {
 	border-color: rgba(121,94,94,.5);
-	border-width: 1px;
-	margin-bottom: 1.5em;
-	padding: .5em;
-	width: 300px;
-}
-
-#user_email {
-	border-color: rgba(121,94,94,.5);
-	border-width: 1px;
-	margin-bottom: .75em;
-	padding: .5em;
-	width: 300px;
-}
-
-#user_password {
-	border-color: rgba(121,94,94,.5);
+	border-radius: 0px;
 	border-width: 1px;
 	margin-bottom: .75em;
 	margin-top: .75em;
@@ -195,13 +180,8 @@ ul {
 	width: 300px;
 }
 
-#user_password_confirmation {
-	border-color: rgba(121,94,94,.5);
-	border-width: 1px;
-	margin-bottom: .75em;
-	margin-top: .75em;
-	padding: .5em;
-	width: 300px;
+#review_dish_review {
+	height: 200px;
 }
 
 .rating {

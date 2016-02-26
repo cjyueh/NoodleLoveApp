@@ -22,13 +22,13 @@
 				<div class="dish-icon rating">
 					<%= f.radio_button :dish_rating, 5 %>
 				</div>
-					<%= label_tag(:dish_rating, "Best") %>		
+					<%= label_tag(:dish_rating, "Best") %>
 		</div>
 		<div>
-			<%= f.text_area :dish_review, size: "60x6", placeholder: "Dish Review" %>
+			<%= f.text_area :dish_review, placeholder: "Dish Review", class: "col-md-4 col-centered form-control" %>
 		</div>
 		<div>
-			<%= f.url_field :dish_image, placeholder: "Dish Image URL" %>
+			<%= f.url_field :dish_image, placeholder: "Dish Image URL", class: "col-md-4 col-centered form-control" %>
 			<%#= f.input :dish_image, label: "JPG file:", input_html: {accept: ('application/jpg')} -%>
 		</div>
 		<%= f.submit "UPDATE REVIEW", :class => 'btn btn-primary body-btn' %>

@@ -4,10 +4,10 @@
 	<div class="form">
 		<%= form_for @user, url: "/sessions", method: "post" do |f| %>
 			<div>
-				<%= f.email_field :email, placeholder: "Email" %>
+				<%= f.email_field :email, placeholder: "Email", class: "col-md-4 col-centered form-control" %>
 			</div>
 			<div>
-				<%= f.password_field :password, placeholder: "Password" %>
+				<%= f.password_field :password, placeholder: "Password", class: "col-md-4 col-centered form-control" %>
 			</div>
 			<%= f.submit "SIGN IN", :class => 'btn btn-primary body-btn' %>
 		<% end %>

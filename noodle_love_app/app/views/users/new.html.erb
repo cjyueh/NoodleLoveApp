@@ -4,16 +4,16 @@
 	<div class="form">
 		<%= form_for @user do |f| %>
 			<div>
-				<%= f.text_field :first_name, placeholder: "First Name", required: true %>
+				<%= f.text_field :first_name, placeholder: "First Name", required: true, class: "col-md-4 col-centered form-control" %>
 			</div>
 			<div>
-				<%= f.email_field :email, placeholder: "Email", required: true %>
+				<%= f.email_field :email, placeholder: "Email", required: true, class: "col-md-4 col-centered form-control" %>
 			</div>
 			<div>
-				<%= f.password_field :password, placeholder: "Password", required: true %>
+				<%= f.password_field :password, placeholder: "Password", required: true, class: "col-md-4 col-centered form-control" %>
 			</div>
 			<div>
-				<%= f.password_field :password_confirmation, placeholder: "Re-type Password", required: true %>
+				<%= f.password_field :password_confirmation, placeholder: "Re-type Password", required: true, class: "col-md-4 col-centered form-control" %>
 			</div>
 			<%= f.submit "CREATE ACCOUNT", :class => 'btn btn-primary body-btn' %>
 		<% end %>
