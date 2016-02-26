@@ -55,6 +55,11 @@ h1 {
 	border-color: #FFB500;
 }
 
+.nav-btn:active {
+	background-color: #FFB500;
+	border-color: #FFB500;
+}
+
 .noodle-love {
 	font-family: 'Monoton', cursive;
 	font-size: 4em;
@@ -80,15 +85,13 @@ a:active {
 
 a:hover {
 	text-decoration: none;
-	color: #FFB500;
-	text-shadow: 1px 1px 2px #795E5E; 
 }
 
-/*#list:hover {
+.name:hover {
 	text-decoration: none;
 	color: #FFB500;
 	text-shadow: 1px 1px 2px #795E5E; 
-}*/
+}
 
 article {
 	text-align: center;
