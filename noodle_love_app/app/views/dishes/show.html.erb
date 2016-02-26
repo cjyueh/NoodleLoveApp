@@ -3,7 +3,7 @@
 
 	<%#= if logged in, user can add review -%>
 	<% if current_user %>
-		<%= link_to "WRTIE A REVIEW", new_review_path, :class => 'btn btn-primary body-btn' %>
+		<%= link_to "WRITE A REVIEW", new_review_path, :class => 'btn btn-primary body-btn' %>
 	<% else %>
 		<%= link_to "SIGN IN TO POST", sign_in_path, :class => 'btn btn-primary body-btn' %>
 	<% end %>
@@ -17,8 +17,8 @@
 				<div class="caption">
 					<h3><%= review.restaurant_name %></h3>	
 					<!-- <p><%= review.dish_rating %></p> -->
-					<%= render_noodles(review.dish_rating) %>
-					<p><%= review.dish_review %></p>
+					<div class="dish-icon rating"><%= render_noodles(review.dish_rating) %></div>
+					<!-- <p><%= review.dish_review %></p> -->
 				</div>
 			</div>
 			</a>

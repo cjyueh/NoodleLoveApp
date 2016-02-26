@@ -9,8 +9,8 @@
 				<div class="caption">
 					<!-- dish at -->
 					<h3><%= review.restaurant_name %></h3>
-					<p><%= render_noodles(review.dish_rating) %></p>
-					<p><%= review.dish_review %></p>
+					<div class="dish-icon rating"><%= render_noodles(review.dish_rating) %></div>
+					<!-- <p><%= review.dish_review %></p> -->
 					<%#= link_to "EDIT REVIEW", edit_review_path(review.id), :class => 'btn btn-primary body-btn' %>
 					<%#= button_to "DELETE REVIEW", review, :method => :delete, :class => 'btn btn-primary body-btn' %>
 				</div>
