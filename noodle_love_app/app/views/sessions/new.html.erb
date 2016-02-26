@@ -3,7 +3,7 @@
 	<h1>Welcome back!</h1>
 	<div class="form">
 		<%= form_for @user, url: "/sessions", method: "post" do |f| %>
-			<div>
+			<div class="form-input">
 				<%= f.email_field :email, placeholder: "Email" %>
 			</div>
 			<div>
