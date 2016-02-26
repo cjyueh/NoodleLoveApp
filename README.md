@@ -1,8 +1,7 @@
 # NoodleLove
-## An App for Fans of Noodles and Pasta
-Rate and write reviews of the noodles dishes at local restaurants.
+**An App for Fans of Noodles and Pasta** Rate and write reviews of the noodles dishes at local restaurants.
 
-# On Heroku
+## On Heroku
 
 # User Stories
 * User can browse index of noodle dishes (and sort index by alphabetical or by cuisine).
@@ -11,10 +10,10 @@ Rate and write reviews of the noodles dishes at local restaurants.
 * User can login to view an index of their own reviews and edit/delete past reviews.
 * User can logout.
 
-# Wireframes
+## Wireframes
 [On GitHub](https://github.com/cjyueh/NoodleLoveApp/tree/master/project-planning)
 
-# Technologies Used
+## Technologies Used
 * HTML5
 * CSS3
 * Boostrap
@@ -23,15 +22,15 @@ Rate and write reviews of the noodles dishes at local restaurants.
 * PostgreSQL
 * BCrypt
 
-# Installation Instructions
+## Installation Instructions
 none
 
-# Phase 2 Features
+## Phase 2 Features
 * Flash error message when sign-up/in fails
 * Provide edit feature for user
 * Enable image upload capability
 * Search and sort dishes and restaurants
 * Modals for signing up/in
 
-# Shout-Outs
+## Shout-Outs
 * Everyone in WDI-26 for thinking when I felt brain-dead.
