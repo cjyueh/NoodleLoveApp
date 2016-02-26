@@ -1,19 +1,23 @@
-<h1>Choose a noodle craving:</h1>
+<div id="dishes-index-pic">
+	<div id="dishes-index-white">
+	<div id="contents">
+	<h1>Choose a noodle craving:</h1>
 
-<%#= dropdown for sorting dish index alphabetically or by cuisine %>
-<%#= f.collection_select :dish_id, @dishes, :id, :cuisine_type %>
+	<%#= dropdown for sorting dish index alphabetically or by cuisine %>
+	<%#= f.collection_select :dish_id, @dishes, :id, :cuisine_type %>
 
-<%#= search field or looking up a particular dish in the index %>
-<%# @dishes.sort! do |dish| %>
+	<%#= search field or looking up a particular dish in the index %>
+	<%# @dishes.sort! do |dish| %>
 
-<div id="dish-list">	
-	<input type="text" class="fuzzy-search" placeholder="search"/>
-	<button class="sort" data-sort="name">Alphabetize</button>
-<ul class="list">
-	<% @dishes.each do |dish| %>
-		<li><%= link_to dish.dish_name, dish_path(dish), :class => "name" %></li>
-	<% end %>
-</ul>
+	<div id="dish-list">	
+		<input type="text" class="fuzzy-search" placeholder="search"/>
+		<button class="sort" data-sort="name">Alphabetize</button>
+	<ul class="list">
+		<% @dishes.each do |dish| %>
+			<p><%= link_to dish.dish_name, dish_path(dish), :class => "name" %></p>
+		<% end %>
+	</ul>
+	</div>
+	</div>
+	</div>
 </div>
-
-

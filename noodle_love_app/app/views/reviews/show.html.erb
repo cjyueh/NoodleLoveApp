@@ -1,16 +1,18 @@
-<h1>This will be a page for a review of a dish.</h1>
+<div class="container">
+	<h1><%= @dish.dish_name %> at <%= @review.restaurant_name %></h1>
+	<label>Rating:</label>
+	<div class="dish-icon"><%= render_noodles(@review.dish_rating) %></div>
 
-<%= link_to "BACK TO DISH", dish_path(@dish), :class => 'btn btn-primary' %>
+	<div><%= link_to "BACK TO DISH", dish_path(@dish), :class => 'btn btn-primary body-btn' %></div>
 
-<h2><%= @dish.dish_name %> at <%= @review.restaurant_name %></h2>
-<img src="<%= @review.dish_image %>" />
-<!-- <p><%= @review.dish_rating %></p> -->
-<%= render_noodles(@review.dish_rating) %>
+	<img src="<%= @review.dish_image %>" />
+	<!-- <p><%= @review.dish_rating %></p> -->
+
+	<p><%= @review.dish_review %></p>
+
+	<%#= if logged in user is the author of a review, show edit or delete button -%>
+	<% if current_user && current_user.id == @review.user_id %>
+		<%= link_to "EDIT REVIEW", edit_review_path(@review), :class => 'btn btn-primary body-btn' %>
+		<%= button_to "DELETE REVIEW", @review, :method => :delete, :class => 'btn btn-primary body-btn' %>
+	<% end %>
 </div>
-<p><%= @review.dish_review %></p>
-
-<%#= if logged in user is the author of a review, show edit or delete button -%>
-<% if current_user && current_user.id == @review.user_id %>
-	<%= link_to "EDIT REVIEW", edit_review_path(@review), :class => 'btn btn-primary' %>
-	<%= button_to "DELETE REVIEW", @review, :method => :delete, :class => 'btn btn-primary' %>
-<% end %>

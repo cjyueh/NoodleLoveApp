@@ -1,17 +1,19 @@
 <!-- this could be a modal. -->
+<div class="container">
+	<h1>Welcome back!</h1>
+	<div class="form">
+		<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+			<div>
+				<%= f.email_field :email, placeholder: "Email" %>
+			</div>
+			<div>
+				<%= f.password_field :password, placeholder: "Password" %>
+			</div>
+			<%= f.submit "SIGN IN", :class => 'btn btn-primary body-btn' %>
+		<% end %>
 
-<h1>This page is for signing in.</h1>
+		<h4>OR</h4>
 
-<%= form_for @user, url: "/sessions", method: "post" do |f| %>
-	<div>
-		<%= f.email_field :email, placeholder: "Email" %>
+		<%= link_to "CREATE ACCOUNT", new_user_path, :class => 'btn btn-primary body-btn' %>
 	</div>
-	<div>
-		<%= f.password_field :password, placeholder: "Password" %>
-	</div>
-	<%= f.submit "SIGN IN" %>
-<% end %>
-
-<h3>OR</h3>
-
-<%= link_to "CREATE ACCOUNT", new_user_path, :class => 'btn btn-primary' %>
+</div>

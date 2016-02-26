@@ -1,19 +1,28 @@
-<h1>This will be a page for one dish.</h1>
+<div class="container">
+	<h1><%= @dish.dish_name %></h1>
 
-<%#= if logged in, user can add review -%>
-<% if current_user %>
-	<%= link_to "ADD REVIEW", new_review_path, :class => 'btn btn-primary' %>
-<% else %>
-	<%= link_to "SIGN IN & POST", sign_in_path, :class => 'btn btn-primary' %>
-<% end %>
+	<%#= if logged in, user can add review -%>
+	<% if current_user %>
+		<%= link_to "ADD REVIEW", new_review_path, :class => 'btn btn-primary body-btn' %>
+	<% else %>
+		<%= link_to "SIGN IN & POST", sign_in_path, :class => 'btn btn-primary body-btn' %>
+	<% end %>
 
-
-<h1><%= @dish.dish_name %></h1>
-
-<% @dish.reviews.each do |review| %>
-	<img src="<%= review.dish_image %>" />
-	<h3><%= review.restaurant_name %></h3>
-	<!-- <p><%= review.dish_rating %></p> -->
-	<%= render_noodles(review.dish_rating) %>
-	<p><%= link_to review.dish_review, review_path(review) %></p>
-<% end %>
+	<div class="row">
+		<% @dish.reviews.each do |review| %>	
+		<div class="col-sm-6 col-md-4">
+			<a href="<%= review_path(review) %>">
+			<div class="thumbnail">
+				<img src="<%= review.dish_image %>" />
+				<div class="caption">
+					<h3><%= review.restaurant_name %></h3>	
+					<!-- <p><%= review.dish_rating %></p> -->
+					<%= render_noodles(review.dish_rating) %>
+					<p><%= review.dish_review %></p>
+				</div>
+			</div>
+			</a>
+		</div>	
+		<% end %>
+	</div>
+</div>

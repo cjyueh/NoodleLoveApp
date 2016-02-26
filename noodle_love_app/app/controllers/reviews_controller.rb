@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
 	def edit
 		@review = Review.find(params[:id])
 		@dish = Dish.find(@review.dish_id)
-		if (@current_user == @review.user)
+		if (current_user.id == @review.user_id)
 			render :edit
 		else
 			redirect_to dish_path(@dish)

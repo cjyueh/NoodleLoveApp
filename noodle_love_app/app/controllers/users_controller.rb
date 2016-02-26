@@ -20,7 +20,6 @@ class UsersController < ApplicationController
 	#show info for one user
 	def show
 		@user = User.find(params[:id]) #find user with that id and save as instance of user
-		@review = Review.find(params[:id]) #find review with that id and save as instance of the review
 		render :show
 	end
 
