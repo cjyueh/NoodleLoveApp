@@ -3,7 +3,7 @@
 
 	<%#= if logged in, user can add review -%>
 	<% if current_user %>
-		<%= link_to "WRITE A REVIEW", new_review_path, :class => 'btn btn-primary body-btn' %>
+		<%= link_to "WRITE A REVIEW", new_review_path, :class => 'btn btn-primary body-btn', :id => 'add-btn' %>
 	<% else %>
 		<%= link_to "SIGN IN TO POST", sign_in_path, :class => 'btn btn-primary body-btn' %>
 	<% end %>

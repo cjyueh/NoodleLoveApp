@@ -25,6 +25,10 @@ h1 {
 	margin-top: 0px;
 }
 
+h4 {
+	color: #FFB500;
+}
+
 .navbar-brand {
 	height: 4.5em;
 	line-height: 2em;
@@ -138,12 +142,22 @@ ul {
 	padding-top: 1.5em;
 }
 
+.review-show {
+	margin-bottom: .75;
+	margin-top: .75em;
+}
+
 /*<!--  all buttons in the body  -->*/
 .body-btn {
 	background-color: #FFFFFF;
 	border-color: #FFFFFF;
 	color: #795E5E;
+	display: inline-block;
 	text-decoration: none;
+}
+
+#add-btn {
+	margin-bottom: 1.5em;
 }
 
 .body-btn:hover {
@@ -202,4 +216,9 @@ img {
 .review {
 	font-size: 1.5em;
 	display: inline;
+}
+
+.review-text {
+	max-width: 600px;
+	text-align: justify;
 }
