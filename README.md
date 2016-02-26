@@ -19,10 +19,12 @@ Rate and write reviews of the noodles dishes at local restaurants.
 * HTML5
 * CSS3
 * Boostrap
-* Ruby
-* Rails
+* Ruby on Rails
 * PostgreSQL
 * BCrypt
+
+## Contribute
+Fork/Clone this repo onto your own computer to contribute to this project.
 
 ## Installation Instructions
 none
@@ -33,3 +35,9 @@ none
 * Enable image upload capability
 * Search and sort dishes and restaurants
 * Modals for signing up/in
+
+## Shout-Outs
+* The best stand-up group ever! (Zombie Harry Potter at the Sidewalk End)
+* The pod people
+* WDI-26
+* TAs Daniel and Tae
