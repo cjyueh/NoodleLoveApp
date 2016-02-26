@@ -1,7 +1,9 @@
 # NoodleLove
-**An App for Fans of Noodles and Pasta** Rate and write reviews of the noodles dishes at local restaurants.
+**An App for Fans of Noodles and Pasta**
+Rate and write reviews of the noodles dishes at local restaurants.
 
-## On Heroku
+## Deployed
+[Heroku](https://limitless-taiga-37031.herokuapp.com/)
 
 # User Stories
 * User can browse index of noodle dishes (and sort index by alphabetical or by cuisine).
@@ -31,6 +33,3 @@ none
 * Enable image upload capability
 * Search and sort dishes and restaurants
 * Modals for signing up/in
-
-## Shout-Outs
-* Everyone in WDI-26 for thinking when I felt brain-dead.
