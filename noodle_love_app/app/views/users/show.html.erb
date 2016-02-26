@@ -1,14 +1,22 @@
 <div class="container">
-<h1>This will be a page for one user.</h1>
-
-<h1><%= @user.first_name %></h1>
-
-<% @user.reviews.each do |review| %>
-	<img src="<%= review.dish_image %>" />
-	<h3><%= review.restaurant_name %></h3>
-	<p><%= review.dish_rating %></p>
-	<p><%= review.dish_review %></p>
-	<%= link_to "EDIT REVIEW", edit_review_path(review.id), :class => 'btn btn-primary' %>
-	<%= button_to "DELETE REVIEW", review, :method => :delete, :class => 'btn btn-primary' %>
-<% end %>
+	<h1><%= @user.first_name %>'s Posts</h1>
+	<div class="row">
+		<% @user.reviews.each do |review| %>
+		<div class="col-sm-6 col-md-4">
+			<a href="<%= review_path(review) %>">
+			<div class="thumbnail">
+				<img src="<%= review.dish_image %>" />
+				<div class="caption">
+					<!-- dish at -->
+					<h3><%= review.restaurant_name %></h3>
+					<p><%= render_noodles(review.dish_rating) %></p>
+					<p><%= review.dish_review %></p>
+					<%#= link_to "EDIT REVIEW", edit_review_path(review.id), :class => 'btn btn-primary body-btn' %>
+					<%#= button_to "DELETE REVIEW", review, :method => :delete, :class => 'btn btn-primary body-btn' %>
+				</div>
+			</div>
+			</a>
+		</div>
+		<% end %>
+	</div>
 </div>

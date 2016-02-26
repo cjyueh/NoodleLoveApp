@@ -71,6 +71,7 @@ h1 {
 
 a {
 	text-decoration: none;
+	color: #795E5E;
 }
 
 a:active {
@@ -79,7 +80,15 @@ a:active {
 
 a:hover {
 	text-decoration: none;
+	color: #FFB500;
+	text-shadow: 1px 1px 2px #795E5E; 
 }
+
+/*#list:hover {
+	text-decoration: none;
+	color: #FFB500;
+	text-shadow: 1px 1px 2px #795E5E; 
+}*/
 
 article {
 	text-align: center;
@@ -88,6 +97,7 @@ article {
 
 #dishes-index-pic {
 	background: url("http://mms.businesswire.com/media/20130919005500/en/383188/5/a.jpg") no-repeat center center fixed;
+	/*background: url("2014_EatWith_Giovanni_Antooliva_108.jpg") no-repeat center center fixed;*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -96,7 +106,7 @@ article {
 }
 
 #dishes-index-white {
-	background-color: rgba(255,255,255,.5);
+	background-color: rgba(255,255,255,.7);
 	margin: 0 auto;
 	/*margin-left: 5%;*/
 	width: 30%;
@@ -154,7 +164,22 @@ ul {
 	padding: 1em;
 }
 
-.dish-icon {
+.rating {
 	font-size: 1.5em;
+	display: inline;
+	padding-left: .5em;
+}
+
+.dish-icon {
 	letter-spacing: .5em;
+	padding-left: .5em;
+}
+
+img {
+	height: 300px;
+}
+
+.review {
+	font-size: 1.5em;
+	display: inline;
 }

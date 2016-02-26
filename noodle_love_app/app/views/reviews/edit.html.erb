@@ -1,28 +1,36 @@
 <div class="container">
-<h1>This page is for editing a review of a dish.</h1>
-
-<h2><%= @dish.dish_name %> at <%= @review.restaurant_name %></h2>
-<%= form_for @review do |f| %>
-	<div>
-		<label>Rating:</label>
-		<%= f.radio_button :dish_rating, 1 %>
-		<%= label_tag(:dish_rating, "Worst") %>
-		<%= f.radio_button :dish_rating, 2 %>
-		<%= label_tag(:dish_rating, "2") %>
-		<%= f.radio_button :dish_rating, 3 %>
-		<%= label_tag(:dish_rating, "3") %>
-		<%= f.radio_button :dish_rating, 4 %>
-		<%= label_tag(:dish_rating, "4") %>
-		<%= f.radio_button :dish_rating, 5 %>
-		<%= label_tag(:dish_rating, "Best") %>
-	</div>
-	<div>
-		<%= f.text_area :dish_review, size: "60x6", placeholder: "Dish Review" %>
-	</div>
-	<div>
-		<%= f.url_field :dish_image, placeholder: "Dish Image URL" %>
-		<%#= f.input :dish_image, label: "JPG file:", input_html: {accept: ('application/jpg')} -%>
-	</div>
-	<%= f.submit "UPDATE REVIEW" %>
-<% end %>
+	<h1>Edit your review of <%= @dish.dish_name %> at <%= @review.restaurant_name %></h1>
+	<%= form_for @review do |f| %>
+		<div>
+			<label class="review">Rating:</label>
+				<div class="dish-icon rating">
+					<%= f.radio_button :dish_rating, 1 %>
+				</div>
+					<%= label_tag(:dish_rating, "Worst") %>
+				<div class="dish-icon rating">
+					<%= f.radio_button :dish_rating, 2 %>
+				</div>
+					<%= label_tag(:dish_rating, "2") %>
+				<div class="dish-icon rating">
+					<%= f.radio_button :dish_rating, 3 %>
+				</div>
+					<%= label_tag(:dish_rating, "3") %>
+				<div class="dish-icon rating">
+					<%= f.radio_button :dish_rating, 4 %>
+				</div>
+					<%= label_tag(:dish_rating, "4") %>
+				<div class="dish-icon rating">
+					<%= f.radio_button :dish_rating, 5 %>
+				</div>
+					<%= label_tag(:dish_rating, "Best") %>		
+		</div>
+		<div>
+			<%= f.text_area :dish_review, size: "60x6", placeholder: "Dish Review" %>
+		</div>
+		<div>
+			<%= f.url_field :dish_image, placeholder: "Dish Image URL" %>
+			<%#= f.input :dish_image, label: "JPG file:", input_html: {accept: ('application/jpg')} -%>
+		</div>
+		<%= f.submit "UPDATE REVIEW", :class => 'btn btn-primary body-btn' %>
+	<% end %>
 </div>

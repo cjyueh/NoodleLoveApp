@@ -1,14 +1,18 @@
 <div class="container">
 	<h1><%= @dish.dish_name %> at <%= @review.restaurant_name %></h1>
-	<label>Rating:</label>
-	<div class="dish-icon"><%= render_noodles(@review.dish_rating) %></div>
-
-	<div><%= link_to "BACK TO DISH", dish_path(@dish), :class => 'btn btn-primary body-btn' %></div>
-
+	<div>
+		<label class="rating">Rating:</label>
+		<div class="dish-icon rating"><%= render_noodles(@review.dish_rating) %></div>
+	</div>
+	
 	<img src="<%= @review.dish_image %>" />
 	<!-- <p><%= @review.dish_rating %></p> -->
+	<div>
+		<label class="review">Review:</label>
+		<p class="review"><%= @review.dish_review %></p>
+	</div>
 
-	<p><%= @review.dish_review %></p>
+	<div><%= link_to "BACK TO DISH", dish_path(@dish), :class => 'btn btn-primary body-btn' %></div>
 
 	<%#= if logged in user is the author of a review, show edit or delete button -%>
 	<% if current_user && current_user.id == @review.user_id %>
