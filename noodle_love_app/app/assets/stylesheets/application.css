@@ -99,7 +99,7 @@ article {
 }
 
 #dishes-index-pic {
-	background: url("http://mms.businesswire.com/media/20130919005500/en/383188/5/a.jpg") no-repeat center center fixed;
+	background: url("background-test.jpg") no-repeat center center fixed;
 	/*background: url("2014_EatWith_Giovanni_Antooliva_108.jpg") no-repeat center center fixed;*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
