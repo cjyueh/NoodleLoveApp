@@ -199,6 +199,9 @@ ul {
 
 .thumbnail:hover {
 	box-shadow: 0 0 10px 1px rgba(255,181,0,.5);
+	-webkit-transform: scale(1.005);
+	-moz-transform: scale(1.005);
+	transform: scale(1.005);
 }
 
 /*<!--  all forms  -->*/
@@ -251,4 +254,16 @@ img {
 .review-text {
 	max-width: 600px;
 	text-align: justify;
+}
+
+#widget-circle {
+  width: 3em;
+  height: 3em;
+  color: #FFB500;
+  border-color: #FFB500;
+}
+
+.uploader-widget-circle .uploadcare-widget-circle--canvas {
+  color: #FFB500;
+  border-color: #FFB500;
 }
