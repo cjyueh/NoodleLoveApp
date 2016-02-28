@@ -14,12 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-//= require list
-
-
-var options = {
-	valueNames: ["name"]
-};
-
-var dishList = new List('dish-list', options);

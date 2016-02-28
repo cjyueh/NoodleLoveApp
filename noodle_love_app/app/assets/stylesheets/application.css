@@ -13,16 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+	border-radius: 0 !important;
+}
+
 body {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
 .navbar {
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 
 h1 {
-	margin-top: 0px;
+	margin-top: 0;
 }
 
 h4 {
@@ -165,10 +170,23 @@ ul {
 	border-color: #FFB500;
 }
 
+.uploadcare-widget-button {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(121,94,94,.5);
+	color: #795E5E;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.uploadcare-widget-button-open:hover {
+	background-color: #FFB500;
+	border-color: #FFB500;
+	color: white;
+}
+
 /*<!--  all index thumbnails  -->*/
 .thumbnail {
-	border-color: rgba(121,94,94,0.25);
-	border-radius: 0px;
+	border-color: rgba(121,94,94,.25);
 }
 
 .thumbnail .caption {
@@ -179,6 +197,10 @@ ul {
 	height: 200px;
 }
 
+.thumbnail:hover {
+	box-shadow: 0 0 10px 1px rgba(255,181,0,.5);
+}
+
 /*<!--  all forms  -->*/
 .form {
 	padding: 1em;
@@ -186,12 +208,16 @@ ul {
 
 .form-control {
 	border-color: rgba(121,94,94,.5);
-	border-radius: 0px;
 	border-width: 1px;
 	margin-bottom: .75em;
 	margin-top: .75em;
 	padding: .5em;
 	width: 300px;
+}
+
+.form-control:focus {
+	border-color: rgba(121,94,94,.5);
+	box-shadow: 0 0 5px rgba(255,181,0,.5);
 }
 
 #review_dish_review {
@@ -202,6 +228,10 @@ ul {
 	font-size: 1.5em;
 	display: inline;
 	padding-left: .5em;
+}
+
+.btn-radio:active {
+	background-color: #FFB500;
 }
 
 .dish-icon {

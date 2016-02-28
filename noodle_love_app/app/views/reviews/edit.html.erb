@@ -30,6 +30,7 @@
 		<div>
 			<%= f.url_field :dish_image, placeholder: "Dish Image URL", class: "col-md-4 col-centered form-control" %>
 			<%#= f.input :dish_image, label: "JPG file:", input_html: {accept: ('application/jpg')} -%>
+			<input type="hidden" role="uploadcare-uploader" data-crop="disabled" data-preview-step="true" data-images-only="true" name="reviews[dish_image]" class="btn btn-primary body-btn" />
 		</div>
 		<%= f.submit "UPDATE REVIEW", :class => 'btn btn-primary body-btn' %>
 	<% end %>
