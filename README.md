@@ -4,7 +4,7 @@ Rate and write reviews of the noodles dishes at local restaurants.
 (p.s. - the app is responsive too!)
 
 ## Deployed
-[Heroku](https://limitless-taiga-37031.herokuapp.com/)
+[on Heroku](https://noodlelove.herokuapp.com/)
 
 # User Stories
 * User can browse index of noodle dishes (and sort index by alphabetical or by cuisine).
