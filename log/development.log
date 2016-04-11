@@ -59597,6 +59597,7 @@ Processing by DishesController#index as HTML
   Rendered dishes/index.html.erb within layouts/application (4.0ms)
   [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
 Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.7ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for ::1 at 2016-04-10 18:20:28 -0700
@@ -59707,3 +59708,146 @@ Processing by DishesController#index as HTML
   [1m[36mDish Load (0.3ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
   Rendered dishes/index.html.erb within layouts/application (2.2ms)
 Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-10 18:51:44 -0700
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.8ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 78ms (Views: 70.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-04-10 18:51:44 -0700
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 18:51:44 -0700
+
+
+Started GET "/assets/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 18:51:44 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 18:51:44 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-10 18:51:44 -0700
+
+
+Started GET "/assets/application.self-2473095db48ae5f88edb975da9f330d048670b230de482e21b267bd18646b7bb.css?body=1" for ::1 at 2016-04-10 18:51:44 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-04-10 18:51:45 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 18:51:45 -0700
+
+
+Started GET "/assets/dishes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-10 18:51:45 -0700
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-10 18:51:45 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-10 18:51:45 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-10 18:51:45 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 18:51:45 -0700
+
+
+Started GET "/assets/background-test.jpg" for ::1 at 2016-04-10 18:51:45 -0700
+
+
+Started GET "/" for ::1 at 2016-04-10 19:06:18 -0700
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-04-10 19:06:18 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-04-10 19:06:18 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 19:06:18 -0700
+
+
+Started GET "/assets/background-test.jpg" for ::1 at 2016-04-10 19:06:18 -0700
+
+
+Started GET "/dishes/1" for ::1 at 2016-04-10 19:06:23 -0700
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDish Load (0.4ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."dish_id" = $1[0m  [["dish_id", 1]]
+  Rendered dishes/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-04-10 19:55:28 -0700
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.7ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 75ms (Views: 67.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-04-10 19:55:28 -0700
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-04-10 19:55:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 19:55:29 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-04-10 19:55:29 -0700
+
+
+Started GET "/assets/background-test.jpg" for ::1 at 2016-04-10 19:55:29 -0700
+
+
+Started GET "/" for ::1 at 2016-04-10 19:57:36 -0700
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.2ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-04-10 19:57:36 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-04-10 19:57:36 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 19:57:36 -0700
+
+
+Started GET "/assets/background-test.jpg" for ::1 at 2016-04-10 19:57:36 -0700
+
+
+Started GET "/" for ::1 at 2016-04-10 20:01:00 -0700
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.3ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-04-10 20:01:00 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-04-10 20:01:00 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 20:01:00 -0700
+
+
+Started GET "/assets/background-test.jpg" for ::1 at 2016-04-10 20:01:01 -0700
+=======
+>>>>>>> parent of 189f963... fixes type-o's in README
