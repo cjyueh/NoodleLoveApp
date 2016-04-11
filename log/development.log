@@ -59785,6 +59785,7 @@ Processing by DishesController#show as HTML
   [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."dish_id" = $1[0m  [["dish_id", 1]]
   Rendered dishes/show.html.erb within layouts/application (2.4ms)
 Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.7ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for ::1 at 2016-04-10 19:55:28 -0700
@@ -59849,5 +59850,4 @@ Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8b
 
 
 Started GET "/assets/background-test.jpg" for ::1 at 2016-04-10 20:01:01 -0700
-=======
->>>>>>> parent of 189f963... fixes type-o's in README
+
