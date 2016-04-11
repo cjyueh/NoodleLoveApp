@@ -1,9 +1,9 @@
 # NoodleLove
 **An App for Fans of Noodles and Pasta**
 
-Rate and write reviews of the noodles dishes at local restaurants.
+Rate and write reviews of noodles dishes at local restaurants.
 
-(p.s. - the app is responsive too!)
+*(p.s. - the app is responsive too!)*
 
 ## Deployed
 [on Heroku](https://noodlelove.herokuapp.com/)
@@ -27,7 +27,7 @@ Rate and write reviews of the noodles dishes at local restaurants.
 * BCrypt
 
 ## Contribute
-Fork/Clone this repo onto your own computer to contribute to this project.
+Fork and clone this repo onto your own computer. Create a branch to contribute to this project.
 
 ## Installation Instructions
 none
