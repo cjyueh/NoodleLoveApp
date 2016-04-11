@@ -1,6 +1,8 @@
 # NoodleLove
 **An App for Fans of Noodles and Pasta**
+
 Rate and write reviews of the noodles dishes at local restaurants.
+
 (p.s. - the app is responsive too!)
 
 ## Deployed
